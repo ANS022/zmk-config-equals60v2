@@ -9,6 +9,13 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
+/ {
+    chosen {
+        zmk,physical-layout = &physical_layout0;
+        // FORCES THE CONTROLLER TO PREFER USB OVER BLUETOOTH WHEN PLUGGED IN
+        zmk,battery = &vbatt;
+        zmk,underglow = &led_strip;
+    };
 
 / {
     keymap {
